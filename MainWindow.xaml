@@ -1,0 +1,31 @@
+﻿<Window x:Name="window1" x:Class="activity.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:activity"
+        mc:Ignorable="d"
+        Title="Пересчет активности" Height="350" Width="379" MouseDown="window1_MouseDown" Icon="/Group 28.jpg">
+    <Grid x:Name="WindowGrid" Margin="0,0,-22,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="276*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="zero_activity" Content="Исходная активность, Бк " HorizontalAlignment="Left" Margin="13,41,0,0" VerticalAlignment="Top" AutomationProperties.HelpText="Введите мантиссу числа и порядок числа" Grid.ColumnSpan="3" Grid.Column="2"/>
+        <Label x:Name="time" Content="Время распада , ч" HorizontalAlignment="Left" Margin="13,84,0,0" VerticalAlignment="Top" AutomationProperties.HelpText="Введите, скольско времения в часах распадается источник" Grid.ColumnSpan="3" Grid.Column="2"/>
+        <Label x:Name="nuclide" Content="Период полураспада, ч" HorizontalAlignment="Left" Margin="13,126,0,0" VerticalAlignment="Top" AutomationProperties.HelpText="Введите период полураспада радионуклида в составе источника" Grid.ColumnSpan="3" Grid.Column="2"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="6" Margin="23,270,0,0" VerticalAlignment="Top" Width="9" Grid.Column="4"/>
+        <Label x:Name="current_activity" Content="Текущая активность,  Бк" HorizontalAlignment="Left" Margin="13,273,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Grid.Column="2"/>
+        <TextBox x:Name="_activity1" HorizontalAlignment="Left" Margin="72,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22" Grid.Column="4" KeyUp="_activity1_KeyUp"/>
+        <Label x:Name="current_activity_calculated" Content="" HorizontalAlignment="Left" Margin="72,273,0,0" VerticalAlignment="Top" Width="82" BorderBrush="Black" BorderThickness="1" Grid.Column="4"/>
+        <TextBox x:Name="time1" HorizontalAlignment="Left" Margin="72,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22" Grid.Column="4" KeyUp="time1_KeyUp"/>
+        <Label x:Name="dec_1" Content="·10" HorizontalAlignment="Left" Margin="192,38,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.664,0.119" Grid.Column="4"/>
+        <TextBox x:Name="power" HorizontalAlignment="Left" Margin="223,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="16" Height="16" RenderTransformOrigin="-1.404,0.053" Grid.Column="4"/>
+        <Button x:Name="calculate" Content="Рассчитать" HorizontalAlignment="Left" Margin="38,198,0,0" VerticalAlignment="Top" FontSize="16" Height="37" Width="128" IsEnabled="False" Cursor="Hand" AutomationProperties.HelpText="Нажмите, чтобы пересчитать активность" BorderThickness="0,0,0,0" Click="calculate_Click" Grid.Column="4"/>
+        <TextBox x:Name="halfTime" HorizontalAlignment="Left" Margin="72,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22" Grid.Column="4" KeyUp="halfTime_KeyUp"/>
+
+    </Grid>
+</Window>
